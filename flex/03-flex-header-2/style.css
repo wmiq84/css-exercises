@@ -12,6 +12,9 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .profile-image {
@@ -45,4 +48,23 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
 }
+
+.left, 
+.right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Mistakes: 
+
+- aligning the items in .header instead of .left, .right
+  - wrong b/c only aligns the flex containers, with list having its dimensions changed
+- not specifying padding for the ul
+  - need to b/c it's space between elements, set auto
+
+*/
